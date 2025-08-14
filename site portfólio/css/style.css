@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kalam:wght@300;400;700&family=Miltonian+Tattoo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+
+    --cor_primaria: #11114e;
+    --fonte_logo: 1.5em;
+    --fonte_menu_principal: "Chakra Petch" "sans-serif";
+    
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: aliceblue;
+
+    display: grid;
+    gap: 30px;
+}
+
+#cabecalho{
+
+    background-color: aliceblue;
+
+    /* Width Style Color */
+    border-bottom: 1px solid rgba(0, 0, 0,.3);
+
+        /* Eixo X Eixo Y esfumaçado cor */
+    box-shadow: 5px 0px 5px rgba(0, 0, 0,.5);
+
+    padding: 5px;
+
+    /* Estruturar o leoiaut com o Grid */
+
+    display: grid;
+
+    grid-template-columns: 1fr 4fr;
+
+       /* Row Column */
+    gap: 0px 100px;
+
+}
+
+#logo{
+
+     display: flex; /* Utilizado para alinhar ao centro */
+
+    align-items: center;
+    justify-content: end;
+    
+    height: 100px;
+}
+
+#logo p{
+
+             /*  Fonte    família    tipo    */
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+    font-size: 1.5em; /* rem (Raiz, HTML) ou em (pai) */
+
+    line-height: 30px;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+
+    text-align: justify;
+
+    text-transform: capitalize;
+    text-decoration: none;
+
+            /* Eixo X eixo Y Esfumaçado cor/opacidade 
+    text-shadow: 2px 2px 10px rgba(0,0,0,.5); */
+
+    color: var(--cor_primaria)
+
+    
+
+}
+
+#menu_principal{
+    
+    height: 100px;
+    padding: 0px 10px;
+
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+           /* Align(vertical) Justify(horizontal) */
+    place-items: center end;
+
+}
+
+#itens_menu ul{
+
+    padding: 10px;
+    list-style: none;
+
+    display: flex;
+
+    
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: end;
+
+    text-shadow: 5px 6px 12px black;
+    
+
+
+
+}
+
+#itens_menu li{
+
+    /* background-color: var(--cor_primaria); */
+
+    
+    padding: 10px;
+   
+
+}
+
+#itens_menu li:hover {
+
+    border-bottom: 3px solid #31565C;
+    color: #31565C;
+    font-style: italic;
+    cursor: pointer;
+
+}
+
+        /* Pseudoclasse */
+#quem_sou:hover{
+
+    background: radial-gradient(var(--cor_primaria), blue);
+
+}
+
+/* primeira seção */
+
+#quem_sou{
+    transition: 1s;
+
+
+    /*
+    background-image: url(/midias/img/foto_perfil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    Efeito paralaxe - imagem parada na rolagem */
+    
+    /* PLANO DE FUNDO COM GRADIENTE LINEAR - (ÂNGULO, COR, COR) */
+    /* background: linear-gradient(45deg, #6d012b, var(--cor_primaria)); */
+
+    /* PLANO DE FUNDO COM GRADIENTE RADIAL - (COR, COR, COR) */
+    background: radial-gradient(var(--cor_primaria), #31565C);
+    background-attachment: fixed;
+
+
+    
+    padding: 10px;
+    
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 10px;
+
+    justify-items: center;
+
+}
+
+#informacoes_texto{
+
+    padding: 10px;
+
+    display: grid;
+
+    grid-template-columns: 0.5fr;
+
+    /* Tamanho das linhas em ordem */
+    grid-template-rows: 3fr 1fr 1fr;
+
+    gap: 10px 0px;
+
+}
+#titulo_informacoes{
+    
+    font-family: var(--fonte_menu_principal);
+    color: white;
+    font-size: 2rem;
+
+
+
+}
+
+#botao_informacoes button{
+    
+    padding: 10px;
+    border: none;
+    background-color: #2bd3ed;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #31565C;
+
+    
+
+    /* Arredondamento de borda */
+    border-radius: 5px;
+
+    box-shadow: rgba(0, 0, 0,.5);
+
+    margin-top: 10px;
+
+}
+
+#botao_informacoes button:hover{
+    background-color: #1193a7;
+    cursor: pointer
+}
+
+#redes_sociais_informacoes{
+
+    display: grid;
+
+    grid-template-columns: 50px 50px 50px;
+    place-items: center start;
+    gap: 30px;
+    
+ 
+
+}
+
+.redes_sociais:hover{
+    cursor: pointer;
+    opacity: 0.5;
+
+}
+
+#foto{
+
+    padding: 10px;
+
+}
+
+#foto figure img{
+
+    border-radius: 1000px;
+    box-shadow: rgba(0, 0, 0,.5);
+
+}
+
+h2{
+    background-color: aliceblue;
+    color: #6d012b;
+
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+/* About */
+
+#sobre_mim{
+
+    background-color: aliceblue;
+    height: 400px;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    
+
+
+
+}
+
+#foto_sobre_mim{
+
+    background-color: #31565C;
+    
+
+}
+
+#texto_sobre_mim{
+
+    background-color: #31565C;
+    
+
+}
+
+/* Skills */
+
+.skills{
+
+    background-color: aliceblue;
+
+}
+
+#habilidades{
+
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+
+
+    background-color: aliceblue;
+    height: 600px
+    
+    
+}
+
+#texto_skills{
+
+    background-color: #31565C;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 20px;
+
+}
+
+#titulo_skills{
+
+    background-color: chartreuse;
+
+}
+
+#habilidades_skills{
+
+    background-color: dodgerblue;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 4fr 4fr 4fr;
+    gap: 10px;
+   
+
+}
+
+.linguagens{
+
+    background-color: lightcyan;
+
+}
+
+#foto_skills{
+
+    background-color: #31565C;
+    padding: 50px;
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+#imagem{
+
+    background-color: azure;
+    
+
+}
+
+
+
+#rodape{
+
+    background-color: #11114e;
+    height: 200px;
+
+    
+    
+
+}
+
+#informacoes_rodape{
+
+    height: 200px;
+    padding: 50px 300px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+
+}
+
+#logo_rodape{
+
+    background-color: chocolate;
+    
+
+}
+
+#redes_sociais_rodape{
+
+    background-color: crimson;
+    
+
+}
+
+#direitos_rodape{
+
+    background-color: dimgray;
+    
+
+}
+
+
